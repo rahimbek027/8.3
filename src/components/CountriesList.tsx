@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
-import CountryItem from "./CountiesItem"; // Adjusted to match naming conventions
+import CountryItem from "./CountiesItem"; 
 import { Context } from "../context/Context";
 
 export interface CountryType {
@@ -13,7 +13,7 @@ export interface CountryType {
 
 const CountriesList = () => {
   const { counties, setCounties, refresh } = useContext(Context);
-  const [visibleCount, setVisibleCount] = useState(8); // Start by showing 8 items
+  const [visibleCount, setVisibleCount] = useState(8); 
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -36,7 +36,7 @@ const CountriesList = () => {
   }, [refresh, setCounties]);
 
   const showMoreItems = () => {
-    setVisibleCount((prev) => prev + 4); // Increase visible items by 4
+    setVisibleCount((prev) => prev + 4); 
   };
 
   return (
